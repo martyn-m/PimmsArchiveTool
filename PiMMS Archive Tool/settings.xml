@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArchiveSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SshUsername>picsolve</SshUsername>
+  <SshPassword>eVols3085Cip</SshPassword>
+  <DbUsername>SYSDBA</DbUsername>
+  <DbPassword>masterkey</DbPassword>
+  <DbPath>/usr/share/picsolveridevideo/database/videoServer.fdb</DbPath>
+</ArchiveSettings>
