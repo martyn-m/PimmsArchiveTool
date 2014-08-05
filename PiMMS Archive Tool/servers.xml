@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServerList>
+  <PimmsServer>
+    <Name>Test</Name>
+    <IpAddress>192.168.0.109</IpAddress>
+    <VideoStorePath>/VideoStore/DVD</VideoStorePath>
+  </PimmsServer>
+  <PimmsServer>
+    <Name>TPTS</Name>
+    <IpAddress>10.0.10.1</IpAddress>
+    <VideoStorePath>/VideoStore/DVD/TPTS</VideoStorePath>
+  </PimmsServer>
+</ServerList>
