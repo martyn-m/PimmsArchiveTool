@@ -167,23 +167,27 @@ namespace PimmsArchiveTool
 
         private void DbQueryButton_Click(object sender, RoutedEventArgs e)
         {
-            String connectionString = "User ID=sysdba;Password=masterkey;" + 
-               "Database=/usr/share/picsolveridevideo/database/videoServer.fdb; " + 
-               "DataSource=192.168.0.109;Charset=NONE;";
+            // Create a connection string using the stored DB details and the current server IP
+            FbConnectionStringBuilder builder = new FbConnectionStringBuilder();
+            builder.DataSource = currentServer.IpAddress;
+            builder.Database = settings.DbPath;
+            builder.UserID = settings.DbUsername;
+            builder.Password = settings.DbPassword;
 
-            FbConnection connection = new FbConnection(connectionString);
+            // Create a new firebird connection
+            FbConnection connection = new FbConnection(builder.ConnectionString);
             try
             {
                 connection.Open();
            
                 FbCommand readCommand = new FbCommand(
                         "SELECT r.ID, r.SSID, r.ENCRYPTION, r.WIFIKEY, r.IPADDRESS" +
-                        " FROM AP_CONFIG r WHERE r.ID = '1'");
+                        " FROM AP_CONFIG r", connection);
                 using (FbDataReader reader = readCommand.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        DebugTextBox.AppendText(reader[0].ToString());
+                        DebugTextBox.AppendText(reader[1].ToString());
                         DebugTextBox.ScrollToEnd();
                     }
                 }
