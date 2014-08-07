@@ -67,14 +67,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ArchiveSettings.cs" />
     <Compile Include="PimmsArchiveTool.xaml.cs">
       <DependentUpon>PimmsArchiveTool.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServerList.cs" />
+    <Compile Include="DataTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

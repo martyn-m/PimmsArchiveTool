@@ -2,11 +2,13 @@
 <ServerList>
   <PimmsServer>
     <Name>Test</Name>
+    <PKRD>ATSM</PKRD>
     <IpAddress>192.168.0.109</IpAddress>
     <VideoStorePath>/VideoStore/DVD</VideoStorePath>
   </PimmsServer>
   <PimmsServer>
-    <Name>TPTS</Name>
+    <Name>Thorpe Swarm</Name>
+    <PKRD>TPTS</PKRD>
     <IpAddress>10.0.10.1</IpAddress>
     <VideoStorePath>/VideoStore/DVD/TPTS</VideoStorePath>
   </PimmsServer>
